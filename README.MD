@@ -26,7 +26,7 @@ Click here: [User Stories](https://trello.com/b/MjmSTWtc/project-1)
 
 -
 #### MVP 
-The minimum requirements are that both players are able to take turns making lines in order to create boxes with their initials inside. Also, to have the person with the most boxes the winner. 
+The minimum requirements are that both players are able to take turns making lines in order to create boxes and know who the winner is.
 
 -
 Click here for github [link](https://github.com/rapersad/Project-1) and clone the respository.

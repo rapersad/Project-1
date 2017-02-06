@@ -5,50 +5,37 @@ h1 {
 }
 
 h2 {
-left: 100px;
+  text-align: center;
 }
 
-h4 {
-
+h3 {
+    text-align: center;
 }
-
-body {
-
-text-align: center;
-}
-
-
 img {
 
 }
-/*
-.row1 {
- float:left;
-}
-
-.row2 {
-  align-items: center;
-}
-
-.row3 {
-  float: right;
-}
-
-.row4 {
-  float: right;
-}
-
-#1,1{
-  float: right;
-}*/
-
-
-
-
 .button {
   text-align: center;
   width: 150px;
   height: 50px;
-  margin: 450px;
+  margin: -50px 640px;
+}
 
+.horizLine {
+  width: 100px;
+  height: 10px;
+  display: inline-block;
+
+}
+.vertLine {
+  width: 10px;
+  height: 100px;
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
 }

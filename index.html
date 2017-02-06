@@ -1,103 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dots and Boxes!</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dots and Boxes!</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+</head>
 
 <h1>Dots & Boxes!</h1>
-  <h2>Score</h2>
-    <h3>Instructions<h3>
+<h2>Score</h2>
+<h3>Instructions<h3>
      <h2>Player 1 Player 2</h2>
-       <h4>Each player takes a turn connecting one dot to another adjacent dot boxly or vertically,
-one move at a time. For every box created, the player gets an extra turn. The player with the most squares wins.</h4>
+       <h4>Each player takes a turn connecting one dot to another adjacent dot horizontally or vertically
+one move at a time. For every box created, the player gets an extra turn. The player with the most boxes wins.</h4>
 
-<tbody><tr><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(0,0)" onmouseover="javascript:if (hedge[0][0]<1) document.he00.src=n0.src" onmouseout="javascript:if (hedge[0][0]<1) document.he00.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he00" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(0,1)" onmouseover="javascript:if (hedge[0][1]<1) document.he01.src=n0.src" onmouseout="javascript:if (hedge[0][1]<1) document.he01.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he01" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(0,2)" onmouseover="javascript:if (hedge[0][2]<1) document.he02.src=n0.src" onmouseout="javascript:if (hedge[0][2]<1) document.he02.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he02" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(0,3)" onmouseover="javascript:if (hedge[0][3]<1) document.he03.src=n0.src" onmouseout="javascript:if (hedge[0][3]<1) document.he03.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he03" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" width="8" height="8"></td></tr><tr><td align="center"><a href="javascript:vmove(0,0)" onmouseover="javascript:if (vedge[0][0]<1) document.ve00.src=n0.src" onmouseout="javascript:if (vedge[0][0]<1) document.ve00.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve00" border="0" width="8" height="36"></a></td><td align="center"><img name="sq00" src="https://www.math.ucla.edu/~tom/Games/blue.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(0,1)" onmouseover="javascript:if (vedge[0][1]<1) document.ve01.src=n0.src" onmouseout="javascript:if (vedge[0][1]<1) document.ve01.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve01" border="0" width="8" height="36"></a></td><td align="center"><img name="sq01" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(0,2)" onmouseover="javascript:if (vedge[0][2]<1) document.ve02.src=n0.src" onmouseout="javascript:if (vedge[0][2]<1) document.ve02.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve02" border="0" width="8" height="36"></a></td><td align="center"><img name="sq02" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(0,3)" onmouseover="javascript:if (vedge[0][3]<1) document.ve03.src=n0.src" onmouseout="javascript:if (vedge[0][3]<1) document.ve03.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve03" border="0" width="8" height="36"></a></td><td align="center"><img name="sq03" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(0,4)" onmouseover="javascript:if (vedge[0][4]<1) document.ve04.src=n0.src" onmouseout="javascript:if (vedge[0][4]<1) document.ve04.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve04" border="0" width="8" height="36"></a></td></tr><tr><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(1,0)" onmouseover="javascript:if (hedge[1][0]<1) document.he10.src=n0.src" onmouseout="javascript:if (hedge[1][0]<1) document.he10.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he10" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(1,1)" onmouseover="javascript:if (hedge[1][1]<1) document.he11.src=n0.src" onmouseout="javascript:if (hedge[1][1]<1) document.he11.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he11" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(1,2)" onmouseover="javascript:if (hedge[1][2]<1) document.he12.src=n0.src" onmouseout="javascript:if (hedge[1][2]<1) document.he12.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he12" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(1,3)" onmouseover="javascript:if (hedge[1][3]<1) document.he13.src=n0.src" onmouseout="javascript:if (hedge[1][3]<1) document.he13.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he13" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" width="8" height="8"></td></tr><tr><td align="center"><a href="javascript:vmove(1,0)" onmouseover="javascript:if (vedge[1][0]<1) document.ve10.src=n0.src" onmouseout="javascript:if (vedge[1][0]<1) document.ve10.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve10" border="0" width="8" height="36"></a></td><td align="center"><img name="sq10" src="https://www.math.ucla.edu/~tom/Games/blue.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(1,1)" onmouseover="javascript:if (vedge[1][1]<1) document.ve11.src=n0.src" onmouseout="javascript:if (vedge[1][1]<1) document.ve11.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve11" border="0" width="8" height="36"></a></td><td align="center"><img name="sq11" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(1,2)" onmouseover="javascript:if (vedge[1][2]<1) document.ve12.src=n0.src" onmouseout="javascript:if (vedge[1][2]<1) document.ve12.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve12" border="0" width="8" height="36"></a></td><td align="center"><img name="sq12" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(1,3)" onmouseover="javascript:if (vedge[1][3]<1) document.ve13.src=n0.src" onmouseout="javascript:if (vedge[1][3]<1) document.ve13.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve13" border="0" width="8" height="36"></a></td><td align="center"><img name="sq13" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(1,4)" onmouseover="javascript:if (vedge[1][4]<1) document.ve14.src=n0.src" onmouseout="javascript:if (vedge[1][4]<1) document.ve14.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve14" border="0" width="8" height="36"></a></td></tr><tr><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(2,0)" onmouseover="javascript:if (hedge[2][0]<1) document.he20.src=n0.src" onmouseout="javascript:if (hedge[2][0]<1) document.he20.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he20" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(2,1)" onmouseover="javascript:if (hedge[2][1]<1) document.he21.src=n0.src" onmouseout="javascript:if (hedge[2][1]<1) document.he21.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he21" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(2,2)" onmouseover="javascript:if (hedge[2][2]<1) document.he22.src=n0.src" onmouseout="javascript:if (hedge[2][2]<1) document.he22.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he22" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(2,3)" onmouseover="javascript:if (hedge[2][3]<1) document.he23.src=n0.src" onmouseout="javascript:if (hedge[2][3]<1) document.he23.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he23" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" width="8" height="8"></td></tr><tr><td align="center"><a href="javascript:vmove(2,0)" onmouseover="javascript:if (vedge[2][0]<1) document.ve20.src=n0.src" onmouseout="javascript:if (vedge[2][0]<1) document.ve20.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve20" border="0" width="8" height="36"></a></td><td align="center"><img name="sq20" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(2,1)" onmouseover="javascript:if (vedge[2][1]<1) document.ve21.src=n0.src" onmouseout="javascript:if (vedge[2][1]<1) document.ve21.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve21" border="0" width="8" height="36"></a></td><td align="center"><img name="sq21" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(2,2)" onmouseover="javascript:if (vedge[2][2]<1) document.ve22.src=n0.src" onmouseout="javascript:if (vedge[2][2]<1) document.ve22.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve22" border="0" width="8" height="36"></a></td><td align="center"><img name="sq22" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(2,3)" onmouseover="javascript:if (vedge[2][3]<1) document.ve23.src=n0.src" onmouseout="javascript:if (vedge[2][3]<1) document.ve23.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve23" border="0" width="8" height="36"></a></td><td align="center"><img name="sq23" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(2,4)" onmouseover="javascript:if (vedge[2][4]<1) document.ve24.src=n0.src" onmouseout="javascript:if (vedge[2][4]<1) document.ve24.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve24" border="0" width="8" height="36"></a></td></tr><tr><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(3,0)" onmouseover="javascript:if (hedge[3][0]<1) document.he30.src=n0.src" onmouseout="javascript:if (hedge[3][0]<1) document.he30.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he30" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(3,1)" onmouseover="javascript:if (hedge[3][1]<1) document.he31.src=n0.src" onmouseout="javascript:if (hedge[3][1]<1) document.he31.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he31" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(3,2)" onmouseover="javascript:if (hedge[3][2]<1) document.he32.src=n0.src" onmouseout="javascript:if (hedge[3][2]<1) document.he32.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he32" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(3,3)" onmouseover="javascript:if (hedge[3][3]<1) document.he33.src=n0.src" onmouseout="javascript:if (hedge[3][3]<1) document.he33.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he33" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" width="8" height="8"></td></tr><tr><td align="center"><a href="javascript:vmove(3,0)" onmouseover="javascript:if (vedge[3][0]<1) document.ve30.src=n0.src" onmouseout="javascript:if (vedge[3][0]<1) document.ve30.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve30" border="0" width="8" height="36"></a></td><td align="center"><img name="sq30" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(3,1)" onmouseover="javascript:if (vedge[3][1]<1) document.ve31.src=n0.src" onmouseout="javascript:if (vedge[3][1]<1) document.ve31.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve31" border="0" width="8" height="36"></a></td><td align="center"><img name="sq31" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(3,2)" onmouseover="javascript:if (vedge[3][2]<1) document.ve32.src=n0.src" onmouseout="javascript:if (vedge[3][2]<1) document.ve32.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve32" border="0" width="8" height="36"></a></td><td align="center"><img name="sq32" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(3,3)" onmouseover="javascript:if (vedge[3][3]<1) document.ve33.src=n0.src" onmouseout="javascript:if (vedge[3][3]<1) document.ve33.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve33" border="0" width="8" height="36"></a></td><td align="center"><img name="sq33" src="https://www.math.ucla.edu/~tom/Games/red.gif" border="0" width="36" height="36"></td><td align="center"><a href="javascript:vmove(3,4)" onmouseover="javascript:if (vedge[3][4]<1) document.ve34.src=n0.src" onmouseout="javascript:if (vedge[3][4]<1) document.ve34.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="ve34" border="0" width="8" height="36"></a></td></tr><tr><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(4,0)" onmouseover="javascript:if (hedge[4][0]<1) document.he40.src=n0.src" onmouseout="javascript:if (hedge[4][0]<1) document.he40.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he40" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(4,1)" onmouseover="javascript:if (hedge[4][1]<1) document.he41.src=n0.src" onmouseout="javascript:if (hedge[4][1]<1) document.he41.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he41" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(4,2)" onmouseover="javascript:if (hedge[4][2]<1) document.he42.src=n0.src" onmouseout="javascript:if (hedge[4][2]<1) document.he42.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he42" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td><td align="center"><a href="javascript:hmove(4,3)" onmouseover="javascript:if (hedge[4][3]<1) document.he43.src=n0.src" onmouseout="javascript:if (hedge[4][3]<1) document.he43.src=n3.src"><img src="https://www.math.ucla.edu/~tom/Games/black.gif" name="he43" border="0" width="36" height="8"></a></td><td align="center"><img src="black.gif" border="0" width="8" height="8"></td></tr></tbody>
+<table align="center">
+  <tr>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+  </tr>
+  <tr>
+    <td><div class="vertLine"></div></td>
+    <td><div class="vertLine"></div></td>
+    <td><div class="vertLine"></div></td>
+  </tr>
+  <tr>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+  </tr>
+  <tr>
+    <td><div class="vertLine"></div></td>
+    <td><div class="vertLine"></div></td>
+    <td><div class="vertLine"></div></td>
+  </tr>
+   <tr>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+   </tr>
+   <tr>
+     <td><div class="vertLine"></div></td>
+     <td><div class="vertLine"></div></td>
+     <td><div class="vertLine"></div></td>
+   </tr>
+   <tr>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+    <td><img src="dot.jpg"><div class="horizLine"></div></td>
+   </tr>
+   <tr>
+     <td><div class="vertLine"></div></td>
+     <td><div class="vertLine"></div></td>
+     <td><div class="vertLine"></div></td>
+   </tr>
 
-
-<!-- <img src="("Goku_golden.jpg")"> -->
-
-    <!-- <table class="grid">
-    <th>
-      <tr>
-        <td class="dot" id="1,1"> <div class="dot"></div></td>
-        <td class="horzLine" id="2,1"> <div class="horzLine"></div></td>
-        <td class="dot" id="3,1"> <div class="dot"></div></td>
-        <td class="horzLine" id="4,1"> <div class="horzLine"></div></td>
-        <td class="dot" id="5,1"> <div class="dot"></div></td>
-        <td class="horzLine" id="6,1"> <div class="horzLine"></div></td>
-        <td class="dot" id="7,1"> <div class="dot"></div></td>
-      </tr>
-      <tr>
-        <td class="vertLine" id="1,2"> <div class="vertLine"></div></td>
-        <td class="box" id="2,2"> <div class="box"></div></td>
-        <td class="vertLine" id="3,2"> <div class="vertLine"></div></td>
-        <td class="box" id="4,2"> <div class="box"></div></td>
-        <td class="vertLine" id="5,2"> <div class="vertLine"></div></td>
-        <td class="box" id="6,2"> <div class="box"></div></td>
-        <td class="vertLine" id="7,2"> <div class="vertLine"></div></td>
-      </tr>
-      <tr>
-        <td class="dot" id="1,3"> <div class="dot"></div></td>
-        <td class="horzLine" id="2,3"> <div class="horzLine"></div></td>
-        <td class="dot" id="3,3"> <div class="dot"></div></td>
-        <td class="horzLine" id="4,3"> <div class="horzLine"></div></td>
-        <td class="dot" id="5,3"> <div class="dot"></div></td>
-        <td class="horzLine" id="6,3"> <div class="horzLine"></div></td>
-        <td class="dot" id="7,3"> <div class="dot"></div></td>
-      </tr>
-      <tr>
-        <td class="vertLine" id="1,4"> <div class="vertLine"></div></td>
-        <td class="box" id="2,4"> <div class="box"></div></td>
-        <td class="vertLine" id="3,4"> <div class="vertLine"></div></td>
-        <td class="box" id="4,4"> <div class="box"></div></td>
-        <td class="vertLine" id="5,4"> <div class="vertLine"></div></td>
-        <td class="box" id="6,4"> <div class="box"></div></td>
-        <td class="vertLine" id="7,4"> <div class="vertLine"></div></td>
-      </tr>
-      <tr>
-        <td class="dot" id="1,5"> <div class="dot"></div></td>
-        <td class="horzLine" id="2,5"> <div class="horzLine"></div></td>
-        <td class="dot" id="3,5"> <div class="dot"></div></td>
-        <td class="horzLine" id="4,5"> <div class="horzLine"></div></td>
-        <td class="dot" id="5,5"> <div class="dot"></div></td>
-        <td class="horzLine" id="6,5"> <div class="horzLine"></div></td>
-        <td class="dot" id="7,5"> <div class="dot"></div></td>
-      </tr>
-      <tr>
-        <td class="vertLine" id="1,6"> <div class="vertLine"></div></td>
-        <td class="box" id="2,6"> <div class="box"></div></td>
-        <td class="vertLine" id="3,6"> <div class="vertLine"></div></td>
-        <td class="box" id="4,6"> <div class="box"></div></td>
-        <td class="vertLine" id="5,6"> <div class="vertLine"></div></td>
-        <td class="box" id="6,6"> <div class="box"></div></td>
-        <td class="vertLine" id="7,6"> <div class="vertLine"></div></td>
-      </tr>
-      <tr>
-        <td class="dot" id="1,7"> <div class="dot"></div></td>
-        <td class="horzLine" id="2,7"> <div class="horzLine"></div></td>
-        <td class="dot" id="3,7"> <div class="dot"></div></td>
-        <td class="horzLine" id="4,7"> <div class="horzLine"></div></td>
-        <td class="dot" id="5,7"> <div class="dot"></div></td>
-        <td class="horzLine" id="6,7"> <div class="horzLine"></div></td>
-        <td class="dot" id="7,7"> <div class="dot"></div></td>
-      </tr>
-     </th>
-     </table> -->
-
-
-
-
-
-
+ </table>
 
 <button class="button" type="submit">Restart game</button>
   <body>
 
 
-
-<script src="app.js"></script>
-
+    <script src="./app.js"></script>
   </body>
 </html>
