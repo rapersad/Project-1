@@ -17,8 +17,8 @@ img {
 .button {
   text-align: center;
   width: 150px;
-  height: 50px;
-  margin: -50px 640px;
+  height: 30px;
+  margin: -100px 640px;
 }
 
 .horizLine {
@@ -38,4 +38,10 @@ img {
 }
 .blue {
   background-color: blue;
+}
+
+.box {
+  width: 90px;
+  height: 100px;
+  margin-left: 20px;
 }
