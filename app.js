@@ -1,64 +1,63 @@
-//(INCOMPLETE)
 // function startGame() {
-// //To reset the game
-//   for (var i = 1; i <= 9; i++) {
-//     cleargrid(i);
-//   }
 
-First player to begin is set to random
+//First player to begin is set to random
 
-var turn = 1
-
-var player1 = {
-  token: 'red',
-  score: 0,
-  scoreBoard: document.getElementById('p1score')
-}
-
-var player2 = {
-  token: 'blue',
-  score: 0,
-  scoreBoard: document.getElementById('p2score')
-}
-
-  document.turn = "Player 1";
-  if (Math.random() < .5) {
-    document.turn = "Player 2";
-}
-  document.winner = null;
-  setMessage(document.turn + " Starts");
-
-
-function setMessage(msg) {
-  document.getElementById("message").innerText = msg;
-}
-
-
-//(INCOMPLETE)
-var Player 1 = 'red';
-var Player 2 = 'blue';
-
-function SwitchTurn()
-
-function takeTurns() {
-  return (turn % 2 ? 'Player 1' : 'Player 2')
-
-if (checkWinner(document.turn)) {
-setMessage(document.turn + " Wins" + "!");
-document.winner = document.turn;
-} else if (document.turn == "red") {
-    document.turn = "blue";
-  } else {
-    document.turn = "red";
- }
-}
+// var turn = 1
+//
+// var player1 = {
+//   token: 'red',
+//   score: 0,
+//   scoreBoard: document.getElementById('p1score')
+// }
+//
+// var player2 = {
+//   token: 'blue',
+//   score: 0,
+//   scoreBoard: document.getElementById('p2score')
+// }
+//
+//   document.turn = "Player 1";
+//   if (Math.random() < .5) {
+//     document.turn = "Player 2";
+// }
+//   document.winner = null;
+//   setMessage(document.turn + " Starts");
+//
+//
+// function setMessage(msg) {
+//   document.getElementById("message").innerText = msg;
+// }
+//
+// //(INCOMPLETE)
+// // var player1 = 'red';
+// // var player2 = 'blue';
+//
+// // function takeTurns() {
+// //    (turn % 2 ? 'Player 1' : 'Player 2')
+//
+// if (checkWinner(document.turn)) {
+// setMessage(document.turn + " Wins" + "!");
+// document.winner = document.turn;
+// } else if (document.turn == "red") {
+//     document.turn = "blue";
+//   } else {
+//     document.turn = "red";
+//  }
+// }
 
 //Creates box 1
+var turn = 'red';
 var boxOneLine = 0
+
 
 $('.available').click(function(){
   $(this).removeClass('available')
-  $(this).addClass('black')
+  if (turn == 'blue') {
+    $(this).addClass('blue')
+  } else {
+    $(this).addClass('red')
+  }
+  turn == 'red' ? turn = 'blue' : turn = 'red'
   console.log($(this).attr('class'))
   if ($(this).hasClass('box1')){
     boxOneLine++
@@ -203,24 +202,37 @@ $('.available').click(function(){
 //  }
 // }
 
-//Kate's idea
+//Check winner
 // var available = 9
 //
-// function claimBox() {
+// function claimBox()
+// {
 //   available == player1Boxes++
 // }
+//
 // function checkWin() {
-//   if(!available) {
-//     if(p1b>p2b)
-//     p1 wins
-//   }
+//   if (!available) {
+//   if (p1b > p2b)
+// }  console.log
+//        'p1 wins'
+// } { else
+//        'p2 wins'
 // }
+//
+// if (condition) {
+//     block of code to be executed if the condition is true
+// } else {
+//     block of code to be executed if the condition is false
+// }
+//
+//
 // $('line').click(function(){
 //   if($(this).hasClass('box1')linesDrawn.box1++
 //   var linesDrawn={
 //     box:0;
 //     box2:0;
-//} end of Kate's idea
+//  }
+// }
 
 // Checks for possible outcomes (INCOMPLETE)
 // function checkWinner(turn) {
@@ -270,3 +282,29 @@ $('.available').click(function(){
 //     }, function(){
 //     $(this).css("background-color", "blue");
 // });
+
+
+//Resets board/scores (incomplete)
+// //To reset the game
+//   for (var i = 1; i <= 9; i++) {
+//     cleargrid(i);
+//   }
+
+// function clearBoard() {
+//   for(var i = 0; i < boxes.length; i++) {
+//     boxes[i].className = 'box'
+//   }
+//   document.getElementById('announce').innerHTML = ''
+//   addListeners()
+// }
+//
+// document.getElementById('resetBoard').addEventListener('click', clearBoard)
+//
+// document.getElementById('resetScores').addEventListener('click', function(){
+//   player1.score = 0
+//   player1.scoreBoard.innerHTML = player1.score
+//   player2.score = 0
+//   player2.scoreBoard.innerHTML = player2.score
+// })
+//
+// addListeners()
