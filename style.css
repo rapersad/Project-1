@@ -33,9 +33,14 @@ img {
   display: inline-block;
 }
 
+.black{
+  background-color: black;
+}
+
 .red {
   background-color: red;
 }
+
 .blue {
   background-color: blue;
 }
