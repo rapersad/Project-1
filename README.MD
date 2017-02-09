@@ -28,5 +28,8 @@ Click here: [User Stories](https://trello.com/b/MjmSTWtc/project-1)
 #### MVP 
 The minimum requirements are that both players are able to take turns making lines in order to create boxes and know who the winner is.
 
+#### Unresolved Problems
+I had an issue that when one line is drawn that creates two boxes, both boxes should change to the winning player's color but instead one box turns blue the other red. It's now fixed so currently I don't have any.
+
 -
 Click here for github [link](https://github.com/rapersad/Project-1) and clone the respository.

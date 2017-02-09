@@ -13,7 +13,7 @@ h3 {
 }
 
 h4 {
-  
+
 }
 
 .player1 {
@@ -27,6 +27,7 @@ h4 {
 img {
 
 }
+
 .button {
   text-align: center;
   width: 150px;
@@ -62,4 +63,8 @@ img {
   width: 90px;
   height: 100px;
   margin-left: 16px;
+}
+
+.available:hover {
+  background-color: gray;
 }

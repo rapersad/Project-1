@@ -31,7 +31,7 @@ function checkWin() {
       return b === 'red'
     }).length
     if (redCount > 4) {
-//Alert red/blue wins!
+      //Alert red/blue wins!
       alert("Red Wins!");
     } else {
       alert("Blue Wins!");
@@ -39,8 +39,7 @@ function checkWin() {
   }
 }
 
-//When box is made changes box color to P1=red P2=blue
-
+//When box is made, changes box color to P1=red P2=blue
 var turn = 'red';
 var boxOneLine = 0
 var boxTwoLines = 0
@@ -54,6 +53,7 @@ var boxNineLines = 0
 
 //Creates blue/red lines
 $('.available').click(function() {
+  var won = false
   $(this).removeClass('available')
   if (turn == 'blue') {
     $(this).addClass('blue')
@@ -67,10 +67,10 @@ $('.available').click(function() {
     boxOneLine++
     if (boxOneLine === 4) {
       $('#box1').addClass(turn)
-//When player creates a box they get an extra turn
+      //When player creates a box they get an extra turn
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box2')) {
@@ -79,7 +79,7 @@ $('.available').click(function() {
       $('#box2').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box3')) {
@@ -88,7 +88,7 @@ $('.available').click(function() {
       $('#box3').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box4')) {
@@ -97,7 +97,7 @@ $('.available').click(function() {
       $('#box4').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box5')) {
@@ -106,7 +106,7 @@ $('.available').click(function() {
       $('#box5').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box6')) {
@@ -115,7 +115,7 @@ $('.available').click(function() {
       $('#box6').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box7')) {
@@ -124,7 +124,7 @@ $('.available').click(function() {
       $('#box7').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box8')) {
@@ -133,7 +133,7 @@ $('.available').click(function() {
       $('#box8').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   if ($(this).hasClass('box9')) {
@@ -142,11 +142,22 @@ $('.available').click(function() {
       $('#box9').addClass(turn)
       boxesWon.push(turn)
       checkWin()
-      turn == 'red' ? turn = 'blue' : turn = 'red'
+      won = true
     }
   }
   //Switch turns P1=red P2=blue
-  turn == 'red' ? turn = 'blue' : turn = 'red'
+  if (!won) {
+
+    turn == 'red' ? turn = 'blue' : turn = 'red'
+    if (turn=='red'){
+      $('.player1').eq(0).text("Red's turn")
+      $('.player2').eq(0).text("Blue")
+
+    } else {
+      $('.player1').eq(0).text("Red")
+      $('.player2').eq(0).text("Blue's turn")
+    }
+  }
 })
 
 ///show player score (INCOMPLETE)
@@ -163,25 +174,26 @@ $('.available').click(function() {
 //  }
 // }
 
-//Changes hover color (incomplete)
+// //Add image
+// $('<img/Goku-golden.png>')
+// .attr('src','img/eqp/' + this.apparel + '/' + this.facing + '_idle.png')
+// .appendTo('#gamediv');
+//
+// // Changes hover color (incomplete)
 // $(".vertLine").hover(function(){
 //     $(this).css("background-color", "red");
 //     }, function(){
 //     $(this).css("background-color", "blue");
-// });
-
-// Resets game (incomplete)
-//   for (var i = 1; i <= 9; i++) {
-//     cleargrid(i);
-//   }
 //
-// function clearBoard() {
-//   for(var i = 1; i < boxes.length; i++) {
-//     boxes[i].className = 'box'
-//   }
-//   document.getElementById('announce').innerHTML = ''
-//   addListeners()
-// }
+//       turn == 'red' ? turn = 'blue' : turn = 'red'
+// });
+// $(".horzLine").hover(function(){
+//     $(this).css("background-color", "red");
+//     }, function(){
+//     $(this).css("background-color", "blue");
+//
+//     turn == 'red' ? turn = 'blue' : turn = 'red'
+// });
 
 // document.getElementById('resetBoard').addEventListener('click', clearBoard)
 //
@@ -195,15 +207,15 @@ $('.available').click(function() {
 // addListeners()
 
 // resets game
-$('#restart').on('click', function(){
+$('#restart').on('click', function() {
   boxesWon = []
-  if($('.box').hasClass('red') || $('.horizLine').hasClass('red') || $('.vertLine').hasClass('red') || $('.box').hasClass('blue')|| $('.horizLine').hasClass('blue') || $('.vertLine').hasClass('blue')){
+  if ($('.box').hasClass('red') || $('.horizLine').hasClass('red') || $('.vertLine').hasClass('red') || $('.box').hasClass('blue') || $('.horizLine').hasClass('blue') || $('.vertLine').hasClass('blue')) {
     $('.box').removeClass('red')
     $('.horizLine').removeClass('red')
     $('.vertLine').removeClass('red')
     $('.box').removeClass('blue')
-      $('.horizLine').removeClass('blue')
-      $('.vertLine').removeClass('blue')
+    $('.horizLine').removeClass('blue')
+    $('.vertLine').removeClass('blue')
   }
   turn = 'red';
   boxOneLine = 0
