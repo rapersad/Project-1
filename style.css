@@ -12,6 +12,10 @@ h3 {
     text-align: center;
 }
 
+h4 {
+  
+}
+
 .player1 {
   color:red;
 }
@@ -57,5 +61,5 @@ img {
 .box {
   width: 90px;
   height: 100px;
-  margin-left: 20px;
+  margin-left: 16px;
 }
