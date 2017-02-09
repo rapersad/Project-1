@@ -227,5 +227,7 @@ $('#restart').on('click', function() {
   boxSevenLines = 0
   boxEightLines = 0
   boxNineLines = 0
+  $('.player1').eq(0).text("P1 Red goes first!")
+  $('.player2').eq(0).text("P2 Blue")
   console.log('here')
 })
