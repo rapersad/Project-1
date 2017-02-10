@@ -1,3 +1,4 @@
+// Variables for each box
 var turn = 'red';
 var boxOneLine = 0
 var boxTwoLines = 0
@@ -105,7 +106,7 @@ $('.available').click(function() {
   }
 
   if (!won) {
-    //Switch turns P1=red P2=blue
+    //Switch turns from red to blue
     turn == 'red' ? turn = 'blue' : turn = 'red'
     if (turn == 'red') {
       $('.player1').eq(0).text("Red's turn")
@@ -118,7 +119,7 @@ $('.available').click(function() {
   }
 })
 
-//Check for winner
+//Check for winner & alerts with pop up
 var boxesWon = []
 
 function checkWin() {
