@@ -1,31 +1,39 @@
 h1 {
   color: red;
   text-align: center;
-
 }
 
 h2 {
   text-align: center;
+  color: blue;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
 }
 
 h4 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: blue;
+}
 
+body {
+  background-image: url(dbz_fight.gif);
 }
 
 .player1 {
-  color:red;
+  color: red;
 }
 
 .player2 {
-  color:blue;
+  color: blue;
 }
 
 img {
-
+  height: 20px;
+  width: 20px;
 }
 
 .button {
@@ -33,36 +41,40 @@ img {
   width: 150px;
   height: 30px;
   margin: -100px 640px;
+  margin-top: 20px;
 }
 
 .horizLine {
   width: 100px;
   height: 10px;
   display: inline-block;
-
+  margin-left: 3px;
+  margin-bottom: 3px;
 }
+
 .vertLine {
   width: 10px;
   height: 100px;
   display: inline-block;
+  margin-left: 5px;
 }
 
-.black{
+.black {
   background-color: black;
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(170, 17, 17);
 }
 
 .blue {
-  background-color: blue;
+  background-color: rgb(17, 6, 121);
 }
 
 .box {
   width: 90px;
   height: 100px;
-  margin-left: 16px;
+  margin-left: 23px;
 }
 
 .available:hover {

@@ -1,27 +1,3 @@
-// var turn = 1
-//
-// var player1 = {
-//   token: 'red',
-//   score: 0,
-//   scoreBoard: document.getElementById('p1score')
-// }
-//
-// var player2 = {
-//   token: 'blue',
-//   score: 0,
-//   scoreBoard: document.getElementById('p2score')
-// }
-//
-// if (checkWinner(document.turn)) {
-// setMessage(document.turn + " Wins" + "!");
-// document.winner = document.turn;
-// } else if (document.turn == "red") {
-//     document.turn = "blue";
-//   } else {
-//     document.turn = "red";
-//  }
-// }
-
 //Check for winner
 var boxesWon = []
 
@@ -159,52 +135,6 @@ $('.available').click(function() {
     }
   }
 })
-
-///show player score (INCOMPLETE)
-// var boxes = document.getElementsByClassName('box')
-//
-
-//Once game is over, stops player from moving again (INCOMPLETE)
-// function nextTurn(space) {
-//   if (document.winner != null) {
-//      setMessage(None);
-// } else if (space.innerText == "") {
-//         space.innerText = document.turn;
-//       switchTurn();
-//  }
-// }
-
-// //Add image
-// $('<img/Goku-golden.png>')
-// .attr('src','img/eqp/' + this.apparel + '/' + this.facing + '_idle.png')
-// .appendTo('#gamediv');
-//
-// // Changes hover color (incomplete)
-// $(".vertLine").hover(function(){
-//     $(this).css("background-color", "red");
-//     }, function(){
-//     $(this).css("background-color", "blue");
-//
-//       turn == 'red' ? turn = 'blue' : turn = 'red'
-// });
-// $(".horzLine").hover(function(){
-//     $(this).css("background-color", "red");
-//     }, function(){
-//     $(this).css("background-color", "blue");
-//
-//     turn == 'red' ? turn = 'blue' : turn = 'red'
-// });
-
-// document.getElementById('resetBoard').addEventListener('click', clearBoard)
-//
-// document.getElementById('resetScores').addEventListener('click', function(){
-//   player1.score = 0
-//   player1.scoreBoard.innerHTML = player1.score
-//   player2.score = 0
-//   player2.scoreBoard.innerHTML = player2.score
-// })
-//
-// addListeners()
 
 // resets game
 $('#restart').on('click', function() {
