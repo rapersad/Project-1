@@ -1,96 +1,134 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Dots and Boxes!</title>
   <link type="text/css" rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
-
-<h1>Dots & Boxes!</h1>
-<h2>Instructions<h2>
+<body>
+  <h1>Dots & Boxes!</h1>
+  <h2>Instructions<h2>
   <h4>Each player takes turns connecting one dot to another adjacent dot horizontally or vertically
 one move at a time. To create a box, <br> you must draw the last line that creates it. For every box created,
 the player gets an extra turn. The player with the most boxes wins.</h4>
-     <h2 class="player1">P1 Red goes first!</h2> <h2 id="p1score"></h2>
-     <h2 class="player2">P2 Blue</h2> <h2 id="p2score"></h2>
+     <h2 class="player1">Red goes first!</h2>
+  <h2 class="player2">Blue</h2>
 
-<table align="center">
-  <tr>
-    <td><img src="orange_ball.png"><div class="horizLine box1 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box2 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box3 available"></div></td>
-    <td><img src="orange_ball.png"></td>
-  </tr>
-  <tr>
-    <td>
-      <div class="vertLine box1 available">
-      <div id="box1" class="box"></div>
-    </div>
-  </td>
-    <td><div class="vertLine box1 box2 available">
-      <div id="box2" class="box"></div>
-    </div>
-  </td>
-    <td><div class="vertLine box2 box3 available">
-      <div id="box3" class="box"></div>
-    </div>
+  <table align="center">
+    <tr>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box1 available"></div>
       </td>
-    <td><div class="vertLine box3 available"></div></td>
-  </tr>
-  <tr>
-    <td><img src="orange_ball.png"><div class="horizLine box1 box4 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box2 box5 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box3 box6 available"></div></td>
-    <td><img src="orange_ball.png"></td>
-  </tr>
-  <tr>
-    <td><div class="vertLine box4 available">
-      <div id="box4" class="box"></div>
-    </div>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box2 available"></div>
       </td>
-    <td><div class="vertLine box4 box5 available">
-      <div id="box5" class="box"></div
-    </div>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box3 available"></div>
       </td>
-    <td><div class="vertLine box5 box6 available">
-      <div id="box6" class="box"></div>
-    </div>
+      <td><img src="orange_ball.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box1 available">
+          <div id="box1" class="box"></div>
+        </div>
       </td>
-    <td><div class="vertLine box6 available"</div></td>
-  </tr>
-   <tr>
-    <td><img src="orange_ball.png"><div class="horizLine box4 box7 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box5 box8 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box6 box9 available"></div></td>
-    <td><img src="orange_ball.png"></td>
-   </tr>
-   <tr>
-     <td><div class="vertLine box7 available">
-        <div id="box7" class="box"></div>
-     </div>
+      <td>
+        <div class="vertLine box1 box2 available">
+          <div id="box2" class="box"></div>
+        </div>
       </td>
-     <td><div class="vertLine box7 box8 available">
-       <div id="box8" class="box"></div>
-     </div>
-       </td>
-     <td><div class="vertLine box8 box9 available">
-       <div id="box9" class="box"></div>
-     </div>
-       </td>
-     <td><div class="vertLine box9 available"></div></td>
-   </tr>
-   <tr>
-    <td><img src="orange_ball.png"><div class="horizLine box7 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box8 available"></div></td>
-    <td><img src="orange_ball.png"><div class="horizLine box9 available"></div></td>
-    <td><img src="orange_ball.png"></td>
-   </tr>
- </table>
+      <td>
+        <div class="vertLine box2 box3 available">
+          <div id="box3" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box3 available"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box1 box4 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box2 box5 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box3 box6 available"></div>
+      </td>
+      <td><img src="orange_ball.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box4 available">
+          <div id="box4" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box4 box5 available">
+          <div id="box5" class="box"></div </div>
+      </td>
+      <td>
+        <div class="vertLine box5 box6 available">
+          <div id="box6" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box6 available" </div>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box4 box7 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box5 box8 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box6 box9 available"></div>
+      </td>
+      <td><img src="orange_ball.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box7 available">
+          <div id="box7" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box7 box8 available">
+          <div id="box8" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box8 box9 available">
+          <div id="box9" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box9 available"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box7 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box8 available"></div>
+      </td>
+      <td><img src="orange_ball.png">
+        <div class="horizLine box9 available"></div>
+      </td>
+      <td><img src="orange_ball.png"></td>
+    </tr>
+  </table>
 
-<button  class="button" type="submit" id="restart">Restart game</button>
-  <body>
+  <button class="button" type="submit" id="restart">Restart game</button>
 
+  <audio src="spirit_bomb.mp3" autoplay>
     <script src="./app.js"></script>
   </body>
 </html>

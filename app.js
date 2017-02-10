@@ -1,21 +1,3 @@
-//Check for winner
-var boxesWon = []
-
-function checkWin() {
-  if (boxesWon.length === 9) {
-    var redCount = boxesWon.filter(function(b) {
-      return b === 'red'
-    }).length
-    if (redCount > 4) {
-      //Alert red/blue wins!
-      alert("Red Wins!");
-    } else {
-      alert("Blue Wins!");
-    }
-  }
-}
-
-//When box is made, changes box color to P1=red P2=blue
 var turn = 'red';
 var boxOneLine = 0
 var boxTwoLines = 0
@@ -36,7 +18,7 @@ $('.available').click(function() {
   } else {
     $(this).addClass('red')
   }
-
+  //When box is made, changes box color to P1=red P2=blue
   console.log($(this).attr('class'))
   //Creates each box
   if ($(this).hasClass('box1')) {
@@ -121,20 +103,37 @@ $('.available').click(function() {
       won = true
     }
   }
-  //Switch turns P1=red P2=blue
-  if (!won) {
 
+  if (!won) {
+    //Switch turns P1=red P2=blue
     turn == 'red' ? turn = 'blue' : turn = 'red'
-    if (turn=='red'){
+    if (turn == 'red') {
       $('.player1').eq(0).text("Red's turn")
       $('.player2').eq(0).text("Blue")
-
+      //Shows which player's turn
     } else {
       $('.player1').eq(0).text("Red")
       $('.player2').eq(0).text("Blue's turn")
     }
   }
 })
+
+//Check for winner
+var boxesWon = []
+
+function checkWin() {
+  if (boxesWon.length === 9) {
+    var redCount = boxesWon.filter(function(b) {
+      return b === 'red'
+    }).length
+    if (redCount > 4) {
+      //Alert red/blue wins!
+      alert("Red Wins!");
+    } else {
+      alert("Blue Wins!");
+    }
+  }
+}
 
 // resets game
 $('#restart').on('click', function() {
@@ -157,7 +156,7 @@ $('#restart').on('click', function() {
   boxSevenLines = 0
   boxEightLines = 0
   boxNineLines = 0
-  $('.player1').eq(0).text("P1 Red goes first!")
-  $('.player2').eq(0).text("P2 Blue")
+  $('.player1').eq(0).text("Red goes first!")
+  $('.player2').eq(0).text("Blue")
   console.log('here')
 })

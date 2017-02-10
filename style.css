@@ -42,14 +42,18 @@ img {
   height: 30px;
   margin: -100px 640px;
   margin-top: 20px;
+  background-color: black;
+  color: red;
+  border-color: orange;
+  font-size: 13px;
 }
 
 .horizLine {
   width: 100px;
   height: 10px;
   display: inline-block;
-  margin-left: 3px;
-  margin-bottom: 3px;
+  margin-left: 1px;
+  margin-bottom: 5px;
 }
 
 .vertLine {
@@ -74,9 +78,9 @@ img {
 .box {
   width: 90px;
   height: 100px;
-  margin-left: 23px;
+  margin-left: 25px;
 }
 
 .available:hover {
-  background-color: gray;
+  background-color: rgb(142, 122, 123);
 }
